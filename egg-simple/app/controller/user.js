@@ -1,12 +1,17 @@
 const { Controller } = require('egg');
-const { Post, IgnoreJwtAll, TagsAll } = require('egg-shell-decorators');
+const { Get, Post, IgnoreJwtAll, TagsAll } = require('egg-shell-decorators');
 
 @TagsAll('用户')
 @IgnoreJwtAll
 class UserController extends Controller {
 
+  @Get('/:id')
+  getUser({ params: { id } }) {
+    return `getUser:${id}`;
+  }
+
   @Post('/')
-  listUser({ body: { name, phone, age } }) {
+  createUser({ body: { name, phone, age } }) {
     return { name, phone, age };
   }
 

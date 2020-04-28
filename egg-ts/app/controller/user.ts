@@ -1,12 +1,17 @@
 import { Controller } from 'egg';
-import { Post, IgnoreJwtAll, TagsAll } from 'egg-shell-decorators';
+import { Get, Post, IgnoreJwtAll, TagsAll } from 'egg-shell-decorators';
 
 @TagsAll('用户')
 @IgnoreJwtAll
-export default class SubOrderController extends Controller {
+export default class UserController extends Controller {
+
+  @Get('/:id')
+  public getUser({ params: { id } }) {
+    return `getUser:${id}`;
+  }
 
   @Post('/')
-  public listUser({ body: { name, phone, age } }) {
+  public createUser({ body: { name, phone, age } }) {
     return { name, phone, age };
   }
 

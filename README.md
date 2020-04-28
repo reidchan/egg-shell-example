@@ -1,4 +1,4 @@
-<img width="100" src="http://outt0i9l8.bkt.clouddn.com/egg-shell-example.png"/>
+<img width="100" src="https://super-github.oss-cn-shenzhen.aliyuncs.com/package/egg-shell-example.png"/>
 
 > [egg-shell-decorators](https://github.com/super2god/egg-shell-decorators)（蛋壳）示例代码。
 

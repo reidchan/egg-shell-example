@@ -1,11 +1,24 @@
 {
+  "/:id": {
+    "get": {
+      "description": "获取用户",
+      "parameters": [
+        { "name": "id", "required": true, "in": "path", "type": "string", "description": "用户id" }
+      ],
+      "responses": {
+        "用户id": {  "type": "object", "schema": { "$ref": "User" } }
+      }
+    }
+  },
   "/": {
     "post": {
       "description": "创建用户",
       "parameters": [
         { "name": "body", "in": "body", "required": true, "schema": { "$ref": "User" } }
       ],
-      "responses": { "type": "object", "schema": { "$ref": "User" } }
+      "responses": {
+        "200": {  "type": "object", "schema": { "$ref": "User" } }
+      }
     }
   }
 }
